@@ -103,26 +103,39 @@ const Footer = () => {
               <p>Meticulously crafted academic standards, Montessori early years, and comprehensive Future Skills for the leaders of tomorrow.</p>
             </div>
 
-            <div className="flex flex-col gap-1 text-xs text-slate-200 pt-2">
+            <div className="flex flex-col gap-1.5 text-xs text-slate-200 pt-2">
               <div className="flex items-center gap-2">
                 <FaPhoneAlt className="text-amber-400 text-xs" />
                 <a href="tel:+923016666233" className="font-bold hover:underline">+92 301 6666233</a>
+                <span className="text-slate-400">/</span>
+                <a href="tel:+923246173226" className="font-bold text-amber-300 hover:underline">+92 324 6173226</a>
               </div>
               <div className="flex items-center gap-2">
                 <FaMapMarkerAlt className="text-red-400 text-xs" />
-                <span>Head Office: Pakpattan / Lahore, Punjab</span>
+                <span>Head Office: Lahore / Pakpattan, Punjab</span>
               </div>
             </div>
 
-            <a
-              href="https://wa.me/923016666233?text=Hello%20PEN%20School%20System"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-2 inline-flex items-center gap-2 rounded-xl bg-[#25D366] hover:bg-[#20ba59] px-4 py-2 text-xs font-bold text-white transition shadow-sm w-fit"
-            >
-              <FaWhatsapp className="text-base" />
-              <span>WhatsApp Official Help</span>
-            </a>
+            <div className="flex flex-wrap gap-2 mt-2">
+              <a
+                href="https://wa.me/923016666233?text=Hello%20PEN%20School%20System"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 rounded-xl bg-[#25D366] hover:bg-[#20ba59] px-3.5 py-2 text-xs font-bold text-white transition shadow-sm w-fit"
+              >
+                <FaWhatsapp className="text-sm" />
+                <span>WhatsApp (+92 301 6666233)</span>
+              </a>
+              <a
+                href="https://wa.me/923246173226?text=Hello%20PEN%20School%20System"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 rounded-xl bg-white/10 hover:bg-white/20 px-3 py-2 text-xs font-semibold text-emerald-300 transition border border-white/20 w-fit"
+              >
+                <FaWhatsapp className="text-sm text-emerald-400" />
+                <span>Line 2 (+92 324 6173226)</span>
+              </a>
+            </div>
           </div>
 
           {/* Navigation Links Columns */}

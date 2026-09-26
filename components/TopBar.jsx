@@ -12,8 +12,8 @@ const TopBar = () => {
     <header className="text-xs text-light relative w-full bg-[#0B2240] border-b border-white/10 z-40">
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-2 flex justify-between items-center gap-2 sm:gap-4 flex-wrap">
         {/* Left: Quick Phone & Campus Selector */}
-        <div className="flex items-center gap-2.5 sm:gap-5 flex-wrap">
-          <div className="flex items-center gap-1.5 text-xs">
+        <div className="flex items-center gap-2.5 sm:gap-4 flex-wrap">
+          <div className="flex items-center gap-2 text-xs">
             <span className="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
             <span className="text-slate-300 font-medium hidden md:inline">Helpline:</span>
             <Link 
@@ -21,6 +21,13 @@ const TopBar = () => {
               className="font-bold text-white hover:text-amber-400 transition-colors"
             >
               +92 301 6666233
+            </Link>
+            <span className="text-slate-400 hidden sm:inline">|</span>
+            <Link 
+              href="tel:+923246173226" 
+              className="font-bold text-amber-300 hover:text-white transition-colors hidden sm:inline"
+            >
+              +92 324 6173226
             </Link>
           </div>
 

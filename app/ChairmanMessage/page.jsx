@@ -7,7 +7,7 @@ import { FaQuoteLeft, FaShieldAlt } from "react-icons/fa";
 
 export const metadata = {
   title: "Chairman's Message | PEN School System",
-  description: "Message from M. Ijaz Ahmad, Chairman, Paradigm Educational Network.",
+  description: "Message from Nadeem Ahmed Saikho, Chairman, Paradigm Educational Network.",
 };
 
 const ChairmanMessage = () => {
@@ -80,7 +80,7 @@ const ChairmanMessage = () => {
 
               <div className="pt-6 border-t border-slate-200">
                 <p className="font-bold text-[#0B2240]">With best wishes,</p>
-                <p className="font-bold text-[#0B2240] text-lg">M. Ijaz Ahmad</p>
+                <p className="font-bold text-[#0B2240] text-lg">Nadeem Ahmed Saikho</p>
                 <p className="text-xs text-slate-500">Founder & Chairman</p>
                 <p className="text-xs text-slate-500">Paradigm Educational Network / PEN Schools</p>
               </div>

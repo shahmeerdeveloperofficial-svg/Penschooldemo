@@ -155,7 +155,7 @@ const HeroHeader = ({ title, description }) => {
               >
                 <div className="flex items-center gap-1.5 bg-white/5 px-3 py-1.5 rounded-xl border border-white/10">
                   <FaCheckCircle className="text-emerald-400 text-xs" />
-                  <span>15+ Campus Branches</span>
+                  <span>16+ Operational Campuses</span>
                 </div>
                 <div className="flex items-center gap-1.5 bg-white/5 px-3 py-1.5 rounded-xl border border-white/10">
                   <FaCheckCircle className="text-emerald-400 text-xs" />

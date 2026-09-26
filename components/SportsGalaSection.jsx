@@ -10,37 +10,37 @@ const sportsHighlights = [
   {
     src: "/pen-assets/WhatsApp Image 2026-09-24 at 6.36.04 PM53.jpeg",
     title: "Annual Sports Gala Parade & Opening March",
-    category: "Sports Gala 2026",
+    category: "Recently Performed Event",
     badge: "Bahria Town Campus"
   },
   {
     src: "/pen-assets/3.jpeg",
     title: "Inter-House Sprint & Relay Track Races",
-    category: "Track & Field",
+    category: "Recently Performed Event",
     badge: "Championship"
   },
   {
     src: "/pen-assets/54.jpeg",
     title: "Synchronized Pom-Pom & Aerobics Drill",
-    category: "Gymnastics",
-    badge: "Red Uniform Troop"
+    category: "Recently Performed Event",
+    badge: "Gymnastics Drill"
   },
   {
     src: "/pen-assets/23.jpeg",
     title: "Karate, Self-Defense & Board Breaking",
-    category: "Martial Arts",
-    badge: "Physical Training"
+    category: "Recently Performed Event",
+    badge: "Martial Arts"
   },
   {
     src: "/pen-assets/47.jpeg",
     title: "Grand Trophy & Gold Medal Presentation",
-    category: "Awards Ceremony",
+    category: "Recently Performed Event",
     badge: "Annual Honors"
   },
   {
     src: "/pen-assets/57.jpeg",
     title: "Parents & Faculty Interactive Fun Races",
-    category: "Community Spirit",
+    category: "Recently Performed Event",
     badge: "Parent Partnership"
   }
 ];
@@ -57,8 +57,8 @@ const SportsGalaSection = () => {
             <FaTrophy className="text-[#9B1B1E]" />
             <span>#Recently performed event</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0B2240]">
-            Annual Sports Gala & <span className="text-[#9B1B1E]">Athletics Carnival</span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0B2240] tracking-tight">
+            Recently Performed Event: <span className="text-[#9B1B1E]">Annual Sports Gala & Athletics Carnival</span>
           </h2>
           <p className="text-slate-600 text-xs sm:text-sm mt-1 max-w-2xl">
             Celebrating athleticism, teamwork, discipline, and healthy sportsmanship across PEN School campuses.

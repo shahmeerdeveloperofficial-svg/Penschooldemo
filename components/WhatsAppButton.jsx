@@ -75,15 +75,24 @@ const WhatsAppButton = () => {
             </div>
 
             {/* Footer Action */}
-            <div className="p-2.5 bg-white border-t border-slate-100">
+            <div className="p-2.5 bg-white border-t border-slate-100 flex flex-col gap-1.5">
               <a
-                href={whatsappUrl}
+                href={`https://wa.me/923016666233?text=${encodeURIComponent(defaultMessage)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white font-bold text-xs transition-all shadow-sm active:scale-98"
               >
                 <FaWhatsapp className="text-base" />
-                <span>Chat on WhatsApp</span>
+                <span>Chat (+92 301 6666233)</span>
+              </a>
+              <a
+                href={`https://wa.me/923246173226?text=${encodeURIComponent(defaultMessage)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full flex items-center justify-center gap-1.5 py-1.5 px-3 rounded-xl bg-slate-100 hover:bg-emerald-50 text-slate-700 hover:text-emerald-700 font-semibold text-[11px] transition-all border border-slate-200"
+              >
+                <FaWhatsapp className="text-emerald-600 text-sm" />
+                <span>Helpline 2 (+92 324 6173226)</span>
               </a>
             </div>
           </motion.div>

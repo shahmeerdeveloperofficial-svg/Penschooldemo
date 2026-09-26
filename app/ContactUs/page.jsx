@@ -21,21 +21,20 @@ const ContactUs = () => {
               Punjab
             </p>
             <p>
-              <span className="font-semibold text-dark">Phone:</span>{" "}
-              <a href="tel:+923016666233" className="text-main">
+              <span className="font-semibold text-dark">Helpline 1:</span>{" "}
+              <a href="tel:+923016666233" className="text-main font-bold">
                 +92 301 6666233
               </a>
             </p>
             <p>
-              <span className="font-semibold text-dark">Facebook:</span>{" "}
-              <a
-                href="/ContactUs"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-main break-all"
-              >
-                PEN School System official contact
+              <span className="font-semibold text-dark">Helpline 2:</span>{" "}
+              <a href="tel:+923246173226" className="text-main font-bold">
+                +92 324 6173226
               </a>
+            </p>
+            <p>
+              <span className="font-semibold text-dark">Branches:</span>{" "}
+              <span>16 Operational Campuses Across Punjab</span>
             </p>
           </div>
         </div>
@@ -48,18 +47,26 @@ const ContactUs = () => {
             school queries. Our team will help you with the next step and share
             the information you need.
           </p>
-          <div className="mt-6 flex flex-wrap gap-4">
+          <div className="mt-6 flex flex-wrap gap-3">
             <a
               href="/OnlineAdmission"
-              className="rounded-full bg-main px-5 py-3 font-medium text-white"
+              className="rounded-full bg-main px-5 py-3 font-medium text-white shadow-md hover:opacity-90 transition-opacity"
             >
               Open Admission Form
             </a>
             <a
-              href="tel:+923016666233"
-              className="rounded-full border border-white/30 px-5 py-3 font-medium text-white"
+              href="https://wa.me/923016666233"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full border border-white/30 px-5 py-3 font-medium text-white hover:bg-white/10 transition-colors"
             >
-              Call Now
+              WhatsApp (+92 301 6666233)
+            </a>
+            <a
+              href="tel:+923246173226"
+              className="rounded-full border border-white/30 px-5 py-3 font-medium text-white hover:bg-white/10 transition-colors"
+            >
+              Call (+92 324 6173226)
             </a>
           </div>
         </div>
