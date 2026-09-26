@@ -9,39 +9,45 @@ import { FaRunning, FaTrophy, FaMedal, FaUsers, FaArrowRight, FaCamera, FaEye, F
 const sportsHighlights = [
   {
     src: "/pen-assets/WhatsApp Image 2026-09-24 at 6.36.04 PM53.jpeg",
-    title: "Annual Sports Gala Parade & Opening March",
+    title: "Annual Award Ceremony & Trophy Unveiling",
     category: "Recently Performed Event",
-    badge: "Bahria Town Campus"
+    badge: "Award Ceremony",
+    position: "object-top"
   },
   {
     src: "/pen-assets/3.jpeg",
-    title: "Inter-House Sprint & Relay Track Races",
+    title: "Montessori Music & Rhythmic Keyboard Session",
     category: "Recently Performed Event",
-    badge: "Championship"
+    badge: "Music & Rhythm",
+    position: "object-center"
   },
   {
     src: "/pen-assets/54.jpeg",
-    title: "Synchronized Pom-Pom & Aerobics Drill",
+    title: "Distinguished Guests & Parent Orientation Gathering",
     category: "Recently Performed Event",
-    badge: "Gymnastics Drill"
+    badge: "Parent Assembly",
+    position: "object-top"
   },
   {
     src: "/pen-assets/23.jpeg",
-    title: "Karate, Self-Defense & Board Breaking",
+    title: "Creative Arts, Crafts & Hands-on Model Display",
     category: "Recently Performed Event",
-    badge: "Martial Arts"
+    badge: "Arts & Crafts",
+    position: "object-center"
   },
   {
     src: "/pen-assets/47.jpeg",
-    title: "Grand Trophy & Gold Medal Presentation",
+    title: "Kot Addu Campus Leadership & Parent Counseling",
     category: "Recently Performed Event",
-    badge: "Annual Honors"
+    badge: "Kot Addu Campus",
+    position: "object-top"
   },
   {
     src: "/pen-assets/57.jpeg",
-    title: "Parents & Faculty Interactive Fun Races",
+    title: "Chairman Keynote Address at Okara Campus Honors Ceremony",
     category: "Recently Performed Event",
-    badge: "Parent Partnership"
+    badge: "Okara Campus Honors",
+    position: "object-top"
   }
 ];
 
@@ -58,10 +64,10 @@ const SportsGalaSection = () => {
             <span>#Recently performed event</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0B2240] tracking-tight">
-            Recently Performed Event: <span className="text-[#9B1B1E]">Annual Sports Gala & Athletics Carnival</span>
+            Recently Performed Events: <span className="text-[#9B1B1E]">Annual Ceremonies & Co-Curricular Highlights</span>
           </h2>
           <p className="text-slate-600 text-xs sm:text-sm mt-1 max-w-2xl">
-            Celebrating athleticism, teamwork, discipline, and healthy sportsmanship across PEN School campuses.
+            Celebrating academic excellence, musical talents, creative arts, and leadership across PEN School campuses.
           </p>
         </div>
 
@@ -70,7 +76,7 @@ const SportsGalaSection = () => {
           className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#0B2240] hover:bg-[#9B1B1E] text-white rounded-xl text-xs font-bold transition-colors shrink-0 shadow-sm"
         >
           <FaCamera />
-          <span>View All Sports Gala Photos</span>
+          <span>View All Event Photos</span>
           <FaArrowRight className="text-[10px]" />
         </Link>
       </div>
@@ -88,12 +94,12 @@ const SportsGalaSection = () => {
               src={item.src}
               alt={item.title}
               fill
-              className="object-cover group-hover:scale-108 transition-transform duration-500"
+              className={`object-cover ${item.position || "object-center"} group-hover:scale-105 transition-transform duration-500`}
             />
             <div className="absolute top-4 left-4 bg-red-600/90 text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-md z-10">
               {item.badge}
             </div>
-            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex flex-col justify-end p-5">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent flex flex-col justify-end p-5">
               <span className="text-[11px] font-bold text-amber-300 uppercase tracking-wider">
                 {item.category}
               </span>
