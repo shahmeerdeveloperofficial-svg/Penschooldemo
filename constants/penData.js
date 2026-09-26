@@ -202,10 +202,10 @@ export const campusesList = [
     altPhone: "+92 324 6173226",
     email: "township.lahore@penschools.edu.pk",
     levels: "Pre-School, Primary, Middle & Senior High",
-    facilities: ["Montessori Lab", "Computer & STEAM Hub", "Science Laboratory", "Activity Zone"],
+    facilities: ["Smart Classrooms", "Computer & STEAM Hub", "Science Laboratory", "Activity Zone"],
     mapUrl: "https://maps.google.com/?q=Township+PEN+School+Lahore",
     badge: "Lahore Executive Branch",
-    image: "/pen-assets/2.jpeg"
+    image: "/pen-assets/WhatsApp Image 2026-09-24 at 5.28.06 PM (1).jpeg"
   },
   {
     id: "jalil-town-gujranwala",
@@ -216,10 +216,10 @@ export const campusesList = [
     altPhone: "+92 324 6173226",
     email: "jaliltown@penschools.edu.pk",
     levels: "Montessori, Junior & Senior High",
-    facilities: ["Smart Classrooms", "Montessori Practical Corner", "Sports Complex", "Transport Wing"],
+    facilities: ["Smart Classrooms", "Montessori Practical Corner", "Science & Tech Arena", "Transport Wing"],
     mapUrl: "https://maps.google.com/?q=Jalil+Town+PEN+School+Gujranwala",
     badge: "Gujranwala Premier Branch",
-    image: "/pen-assets/3.jpeg"
+    image: "/pen-assets/27.jpeg"
   },
   {
     id: "dc-road-gujranwala",
@@ -230,10 +230,10 @@ export const campusesList = [
     altPhone: "+92 324 6173226",
     email: "dcroad@penschools.edu.pk",
     levels: "Pre-School, Junior & Middle Section",
-    facilities: ["Bilingual Phonics Zone", "Kids Activity Park", "IT & Robotics Corner", "Digital Library"],
+    facilities: ["State-of-the-Art IT Lab", "Kids Activity Park", "Robotics Corner", "Digital Library"],
     mapUrl: "https://maps.google.com/?q=DC+Road+PEN+School+Gujranwala",
     badge: "City Center Branch",
-    image: "/pen-assets/4.jpeg"
+    image: "/pen-assets/WhatsApp Image 2026-09-24 at 5.28.07 PM (1).jpeg"
   },
   {
     id: "ghuman-wala-campus",
@@ -247,7 +247,7 @@ export const campusesList = [
     facilities: ["Montessori Apparatus", "Activity-Based Learning Hub", "Science Corner", "Safe Transport"],
     mapUrl: "https://maps.google.com/?q=Ghuman+Wala+PEN+School",
     badge: "Regional Branch",
-    image: "/pen-assets/5.jpeg"
+    image: "/pen-assets/13.jpeg"
   },
   {
     id: "botala-jhanda-singh",
@@ -258,10 +258,10 @@ export const campusesList = [
     altPhone: "+92 324 6173226",
     email: "botala@penschools.edu.pk",
     levels: "Pre-School, Primary & Middle School",
-    facilities: ["Sensory Development Lab", "Spoken English Room", "Playground Area"],
+    facilities: ["Creative Arts Studio", "Sensory Development Lab", "Spoken English Room", "Playground Area"],
     mapUrl: "https://maps.google.com/?q=Botala+Jhanda+Singh+PEN+School",
     badge: "Purpose-Built Branch",
-    image: "/pen-assets/6.jpeg"
+    image: "/pen-assets/18.jpeg"
   },
   {
     id: "ali-pur-chatah",
@@ -272,10 +272,10 @@ export const campusesList = [
     altPhone: "+92 324 6173226",
     email: "alipurchatta@penschools.edu.pk",
     levels: "Montessori, Primary & Secondary Section",
-    facilities: ["Montessori Lab", "Physics & Chemistry Labs", "Sports Arena", "Activity Hall"],
+    facilities: ["Montessori Lab", "Physics & Chemistry Labs", "Cultural Assembly Grounds", "Activity Hall"],
     mapUrl: "https://maps.google.com/?q=Ali+Pur+Chatta+PEN+School",
     badge: "Leading Town Branch",
-    image: "/pen-assets/7.jpeg"
+    image: "/pen-assets/20.jpeg"
   },
   {
     id: "hafizabad-campus",
@@ -286,10 +286,10 @@ export const campusesList = [
     altPhone: "+92 324 6173226",
     email: "hafizabad@penschools.edu.pk",
     levels: "Pre-School to Matriculation (SNC Aligned)",
-    facilities: ["Smart Audio-Visual Rooms", "Science Labs", "Montessori Practical Arena", "Sports Grounds"],
+    facilities: ["Central Seminar Hall", "Science Labs", "Montessori Practical Arena", "Sports Grounds"],
     mapUrl: "https://maps.google.com/?q=Hafizabad+PEN+School",
     badge: "District Flagship Branch",
-    image: "/pen-assets/8.jpeg"
+    image: "/pen-assets/26.jpeg"
   },
   {
     id: "nowshera-virkan",
@@ -300,10 +300,10 @@ export const campusesList = [
     altPhone: "+92 324 6173226",
     email: "nowsheravirkan@penschools.edu.pk",
     levels: "Montessori, Junior & Senior High",
-    facilities: ["Montessori Activity Center", "STEAM & Coding Corner", "Playground & Sports Wing"],
+    facilities: ["Montessori Practical Life Hub", "STEAM & Coding Corner", "Playground & Sports Wing"],
     mapUrl: "https://maps.google.com/?q=Nowshera+Virkan+PEN+School",
     badge: "Tehsil Premier Branch",
-    image: "/pen-assets/9.jpeg"
+    image: "/pen-assets/31.jpeg"
   },
   {
     id: "sialkot-campus",
@@ -314,10 +314,10 @@ export const campusesList = [
     altPhone: "+92 324 6173226",
     email: "sialkot@penschools.edu.pk",
     levels: "Early Years, Junior & Senior High (Matric & O-Level)",
-    facilities: ["Robotics & IT Lab", "Montessori Practical Life Hub", "Sports & Athletic Arena", "Auditorium"],
+    facilities: ["Advanced Science Laboratories", "Robotics & IT Lab", "Sports & Athletic Arena", "Auditorium"],
     mapUrl: "https://maps.google.com/?q=Sialkot+PEN+School",
     badge: "Industrial Hub Branch",
-    image: "/pen-assets/10.jpeg"
+    image: "/pen-assets/WhatsApp Image 2026-09-24 at 5.28.07 PM.jpeg"
   },
   {
     id: "pattoki-campus",
@@ -328,10 +328,10 @@ export const campusesList = [
     altPhone: "+92 324 6173226",
     email: "pattoki@penschools.edu.pk",
     levels: "Pre-School, Primary & Middle School",
-    facilities: ["Montessori Classrooms", "Activity Park", "Bilingual Literacy Wing", "Safe Van Service"],
+    facilities: ["Annual Gala Stage", "Montessori Classrooms", "Bilingual Literacy Wing", "Safe Van Service"],
     mapUrl: "https://maps.google.com/?q=Pattoki+PEN+School",
     badge: "Premier Town Branch",
-    image: "/pen-assets/11.jpeg"
+    image: "/pen-assets/37.jpeg"
   },
   {
     id: "kot-addu-campus",
@@ -342,10 +342,10 @@ export const campusesList = [
     altPhone: "+92 324 6173226",
     email: "kotaddu@penschools.edu.pk",
     levels: "Pre-School to Matriculation",
-    facilities: ["Science Labs", "Montessori Wing", "Sports Ground", "Modern IT Classroom"],
+    facilities: ["Sensory & Maths Learning Zone", "Science Labs", "Sports Ground", "Modern IT Classroom"],
     mapUrl: "https://maps.google.com/?q=Kot+Addu+PEN+School",
     badge: "Southern Punjab Branch",
-    image: "/pen-assets/12.jpeg"
+    image: "/pen-assets/43.jpeg"
   },
   {
     id: "pgs-kot-addu",
@@ -356,10 +356,10 @@ export const campusesList = [
     altPhone: "+92 324 6173226",
     email: "pgskotaddu@penschools.edu.pk",
     levels: "Montessori & Grammar School Wing",
-    facilities: ["Grammar Section Hub", "Hands-on Discovery Lab", "Phonics & Music Corner"],
+    facilities: ["ABCD Round Learning Tables", "Hands-on Discovery Lab", "Phonics & Music Corner"],
     mapUrl: "https://maps.google.com/?q=PGS+Kot+Addu+PEN+School",
     badge: "PGS Specialized Branch",
-    image: "/pen-assets/13.jpeg"
+    image: "/pen-assets/WhatsApp Image 2026-09-24 at 5.28.05 PM (1).jpeg"
   },
   {
     id: "renala-khurd",
@@ -370,10 +370,10 @@ export const campusesList = [
     altPhone: "+92 324 6173226",
     email: "renala@penschools.edu.pk",
     levels: "Early Childhood & Senior School",
-    facilities: ["Montessori Section", "Digital Learning Smart Board", "Science Lab", "Transport Facility"],
+    facilities: ["Chemical & Biology Laboratory", "Digital Learning Smart Board", "Montessori Wing", "Transport Facility"],
     mapUrl: "https://maps.google.com/?q=Renala+Khurd+PEN+School",
     badge: "GT Road Executive Branch",
-    image: "/pen-assets/14.jpeg"
+    image: "/pen-assets/52.jpeg"
   },
   {
     id: "okara-campus",
@@ -384,10 +384,10 @@ export const campusesList = [
     altPhone: "+92 324 6173226",
     email: "okara@penschools.edu.pk",
     levels: "Montessori, Junior & Senior High",
-    facilities: ["STEAM Innovation Center", "Montessori Practical Area", "Sports Complex", "Library"],
+    facilities: ["Grand Anthem & Gala Grounds", "STEAM Innovation Center", "Sports Complex", "Library"],
     mapUrl: "https://maps.google.com/?q=Okara+PEN+School",
     badge: "Okara Central Campus",
-    image: "/pen-assets/15.jpeg"
+    image: "/pen-assets/58.jpeg"
   },
   {
     id: "jand-attock",
@@ -398,10 +398,10 @@ export const campusesList = [
     altPhone: "+92 324 6173226",
     email: "jand@penschools.edu.pk",
     levels: "Pre-School, Junior & High School",
-    facilities: ["Science & Computer Labs", "Montessori Wing", "Activity-Based Classrooms", "Transport Wing"],
+    facilities: ["Main Campus Assembly Quadrangle", "Science & Computer Labs", "Montessori Wing", "Transport Wing"],
     mapUrl: "https://maps.google.com/?q=Jand+Attock+PEN+School",
     badge: "Northern Punjab Branch",
-    image: "/pen-assets/16.jpeg"
+    image: "/pen-assets/2.jpeg"
   }
 ];
 
