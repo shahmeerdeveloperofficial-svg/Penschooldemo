@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { campusesList } from "@/constants/penData";
-import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaGraduationCap, FaDirections, FaWhatsapp, FaCheck, FaSearch, FaBuilding } from "react-icons/fa";
+import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaGraduationCap, FaDirections, FaWhatsapp, FaCheck, FaSearch, FaBuilding, FaFacebook } from "react-icons/fa";
 
 const CampusSelector = () => {
   const [selectedCity, setSelectedCity] = useState("All");
@@ -162,25 +162,38 @@ const CampusSelector = () => {
               </div>
 
               {/* Action Buttons */}
-              <div className="p-6 pt-0 grid grid-cols-2 gap-2 border-t border-slate-100 mt-4">
-                <a
-                  href={campus.mapUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="py-2.5 px-3 rounded-xl bg-slate-100 hover:bg-[#0B2240] text-slate-700 hover:text-white font-semibold text-xs flex items-center justify-center gap-1.5 transition-colors"
-                >
-                  <FaDirections />
-                  <span>Google Map</span>
-                </a>
-                <a
-                  href={`https://wa.me/923016666233?text=${encodeURIComponent(`Inquiring about admissions for ${campus.name}`)}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="py-2.5 px-3 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white font-semibold text-xs flex items-center justify-center gap-1.5 transition-colors shadow-xs"
-                >
-                  <FaWhatsapp />
-                  <span>Enquire</span>
-                </a>
+              <div className="p-6 pt-0 flex flex-col gap-2 border-t border-slate-100 mt-4">
+                <div className="grid grid-cols-2 gap-2">
+                  <a
+                    href={campus.mapUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="py-2 px-3 rounded-xl bg-slate-100 hover:bg-[#0B2240] text-slate-700 hover:text-white font-semibold text-xs flex items-center justify-center gap-1.5 transition-colors"
+                  >
+                    <FaDirections className="text-amber-500" />
+                    <span>Location Map</span>
+                  </a>
+                  <a
+                    href={`https://wa.me/923016666233?text=${encodeURIComponent(`Inquiring about admissions for ${campus.name}`)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="py-2 px-3 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white font-semibold text-xs flex items-center justify-center gap-1.5 transition-colors shadow-xs"
+                  >
+                    <FaWhatsapp />
+                    <span>WhatsApp</span>
+                  </a>
+                </div>
+                {campus.facebookUrl && (
+                  <a
+                    href={campus.facebookUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full py-2 px-3 rounded-xl bg-[#1877F2]/10 hover:bg-[#1877F2] text-[#1877F2] hover:text-white font-bold text-xs flex items-center justify-center gap-2 transition-all border border-[#1877F2]/20 shadow-2xs group/fb"
+                  >
+                    <FaFacebook className="text-sm text-[#1877F2] group-hover/fb:text-white transition-colors" />
+                    <span>Official Facebook Campus Page</span>
+                  </a>
+                )}
               </div>
             </motion.div>
           ))}
