@@ -9,7 +9,7 @@ const MontessoriClassrooms = dynamic(() => import("../components/MontessoriClass
 const ActivityBasedLearning = dynamic(() => import("../components/ActivityBasedLearning"));
 const AcademicShowcase = dynamic(() => import("../components/AcademicShowcase"));
 const NetworkStats = dynamic(() => import("../components/NetworkStats"));
-const CampusSelector = dynamic(() => import("../components/CampusSelector"));
+import CampusSelector from "../components/CampusSelector";
 const CircularsHub = dynamic(() => import("../components/CircularsHub"));
 const MediaGallery = dynamic(() => import("../components/MediaGallery"));
 const Bento = dynamic(() => import("../components/Bento"));
