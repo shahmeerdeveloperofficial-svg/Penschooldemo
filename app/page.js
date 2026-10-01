@@ -2,6 +2,7 @@ import dynamic from "next/dynamic";
 import HeroHeader from "../components/HeroHeader";
 import LeadershipDesk from "../components/LeadershipDesk";
 import DirectorSpotlight from "../components/DirectorSpotlight";
+import FranchiseSpotlight from "../components/FranchiseSpotlight";
 
 const Marquee = dynamic(() => import("../components/Marquee"), { ssr: false });
 const SportsGalaSection = dynamic(() => import("../components/SportsGalaSection"));
@@ -47,6 +48,9 @@ export default function Home() {
 
       {/* 4. Director of Operations (H. Ali Nasir) Official Graphic Poster Spotlight */}
       <DirectorSpotlight />
+
+      {/* 5. Franchise Sale Regional Manager (Mr. Abdul Khaliq) Vision & Regional Expansion */}
+      <FranchiseSpotlight />
 
       {/* 5. Recently Performed Events: Annual Sports Gala & Athletics Carnival */}
       <SportsGalaSection />

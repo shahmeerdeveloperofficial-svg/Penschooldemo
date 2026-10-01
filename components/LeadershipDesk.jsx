@@ -35,6 +35,15 @@ const leadersList = [
     accentColor: "from-[#0B2240] to-[#0284C7]",
     badgeColor: "bg-[#0B2240] text-white",
   },
+  {
+    key: "franchiseManager",
+    slug: "/FranchiseMessage",
+    data: leadershipData.franchiseManager,
+    tabLabel: "Franchise Regional Manager",
+    badgeLabel: "FRANCHISE SALE REGIONAL MANAGER",
+    accentColor: "from-[#047857] to-[#0B2240]",
+    badgeColor: "bg-emerald-800 text-amber-300",
+  },
 ];
 
 const LeadershipDesk = () => {

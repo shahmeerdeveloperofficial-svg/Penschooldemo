@@ -35,6 +35,25 @@ export const leadershipData = {
       "Warm regards,\nUzair Ahmad\nAcademic Head\nPEN Schools Network"
     ]
   },
+  franchiseManager: {
+    id: "franchiseManager",
+    name: "Abdul Khaliq",
+    designation: "Franchise Sale Regional Manager",
+    roleBadge: "FRANCHISE SALE REGIONAL MANAGER",
+    campusRole: "Director of PGS Kot Addu Campus",
+    organization: "Paradigm Educational Network / PEN Schools",
+    image: "/pen-assets/abdul-khaliq.jpg",
+    posterImage: "/pen-assets/abdul-khaliq-poster.jpg",
+    shortQuote: "Empowering visionary school owners and educational entrepreneurs across Pakistan with proven academic systems.",
+    quoteParagraph: "Expanding high-standard Montessori & SNC-aligned schooling across every district. We provide comprehensive franchise solutions including complete turnkey setup, centralized academic curriculum, standardized teacher training, and ongoing operational support to ensure educational and commercial success.",
+    website: "www.penschools.edu.pk",
+    message: [
+      "Welcome to PEN Schools Franchise & Regional Growth Network.",
+      "As Franchise Sale Regional Manager and Director of PGS Kot Addu Campus, my mission is to partner with educational leaders and entrepreneurs to establish world-class, purpose-driven campuses across Pakistan.",
+      "Our turnkey franchise model guarantees complete institutional support: from SNC & Maria Montessori curriculum implementation and modern IT/STEAM integration, to rigorous teacher development and centralized academic audits.",
+      "Together, we are transforming schooling standards and building sustainable, high-impact learning institutions in every city."
+    ]
+  },
   chairman: {
     id: "chairman",
     name: "Nadeem Ahmed Saikho",
@@ -412,7 +431,7 @@ export const campusesList = [
     phone: "+92 301 6666233",
     altPhone: "+92 324 6173226",
     email: "jand@penschools.edu.pk",
-    facebookUrl: "https://www.facebook.com/penschools.official",
+    facebookUrl: "https://www.facebook.com/share/1Ezgns6PA4/?mibextid=wwXIfr",
     levels: "Pre-School, Junior & High School",
     facilities: ["Main Campus Assembly Quadrangle", "Science & Computer Labs", "Montessori Wing", "Transport Wing"],
     mapUrl: "https://maps.google.com/?q=Jand+Attock+PEN+School",
