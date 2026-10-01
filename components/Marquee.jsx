@@ -93,9 +93,10 @@ export default function Marquee({ List = DefaultList, direction, speed }) {
                 {i !== ArrayData.length && (
                   <Image
                     src={"/penlogo.png"}
-                    width={300}
-                    height={200}
+                    width={120}
+                    height={60}
                     alt="Logo"
+                    loading="lazy"
                     className="h-10 sm:h-14 w-auto rounded-md"
                   />
                 )}
@@ -119,9 +120,10 @@ export default function Marquee({ List = DefaultList, direction, speed }) {
                 {i !== ArrayData.length && (
                   <Image
                     src={"/penlogo.png"}
-                    width={300}
-                    height={200}
+                    width={120}
+                    height={60}
                     alt="Logo"
+                    loading="lazy"
                     className="h-10 sm:h-14 w-auto rounded-md"
                   />
                 )}

@@ -205,6 +205,8 @@ const ActivityBasedLearning = () => {
                 src={activeActivity.image}
                 alt={activeActivity.title}
                 fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 450px"
+                loading="lazy"
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent flex items-end p-5">

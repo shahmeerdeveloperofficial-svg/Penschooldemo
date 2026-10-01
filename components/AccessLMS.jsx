@@ -64,9 +64,10 @@ const AccessLMS = () => {
         <div className="flex-1 aspect-square flex justify-center items-center">
           <Image
             src={"/penlogo.png"}
-            width={1000}
-            height={600}
+            width={400}
+            height={200}
             alt="PEN School System logo"
+            loading="lazy"
             className="w-full max-w-md rounded-3xl object-contain p-6"
           />
         </div>

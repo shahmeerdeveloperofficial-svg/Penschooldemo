@@ -41,6 +41,7 @@ const Bento = () => {
             width="400"
             height="400"
             alt="book"
+            loading="lazy"
             className="transition-all duration-700 group-hover/card:scale-105 origin-bottom-right absolute right-0 bottom-0 w-96 translate-x-[5%] translate-y-[15%] opacity-15"
           />
           <div className="flex flex-col gap-4 relative z-10">
@@ -87,6 +88,7 @@ const Bento = () => {
             width="400"
             height="400"
             alt="speaker"
+            loading="lazy"
             className="transition-all duration-700 group-hover/card:scale-110 origin-bottom-right absolute right-0 bottom-0 w-40 translate-x-[5%] translate-y-[5%] opacity-15"
           />
           <div className="flex flex-col gap-4 relative z-10">
@@ -134,6 +136,7 @@ const Bento = () => {
             width="400"
             height="400"
             alt="spark"
+            loading="lazy"
             className="transition-all duration-700 group-hover/card:scale-110 origin-bottom-right absolute right-0 bottom-0 w-44 translate-x-[5%] translate-y-[5%] opacity-15"
           />
           <div className="relative z-10 flex flex-col gap-4">

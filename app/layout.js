@@ -6,8 +6,13 @@ import LenisSmooth from "../components/LenisSmooth";
 import Footer from "../components/Footer";
 import WhatsAppButton from "../components/WhatsAppButton";
 
-// Load Poppins font
-const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700"] });
+// Load Poppins font with swap and preload
+const poppins = Poppins({ 
+  subsets: ["latin"], 
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+  preload: true,
+});
 
 export const metadata = {
   title: "PEN School System | Paradigm Educational Network",

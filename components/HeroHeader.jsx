@@ -71,12 +71,7 @@ const HeroHeader = ({ title, description }) => {
             {/* Left Column: Typography, Badges & CTAs */}
             <div className="lg:col-span-7 space-y-6 text-left">
               {/* Brand Top Badges */}
-              <motion.div
-                initial={{ opacity: 0, y: -15 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                className="flex items-center gap-2 sm:gap-3 flex-wrap"
-              >
+              <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
                 <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-400/20 text-amber-300 text-xs font-bold uppercase tracking-wider border border-amber-400/30 shadow-xs">
                   <FaShieldAlt className="text-amber-400" />
                   <span>Paradigm Educational Network</span>
@@ -84,41 +79,26 @@ const HeroHeader = ({ title, description }) => {
                 <div className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-[#9B1B1E]/40 text-red-200 text-xs font-semibold border border-red-500/30">
                   <span>Single National Curriculum (SNC)</span>
                 </div>
-              </motion.div>
+              </div>
 
               {/* Heading */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2, duration: 0.7 }}
-                className="space-y-2"
-              >
+              <div className="space-y-2">
                 <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.15]">
                   PEN School <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-400 to-amber-200">System</span>
                 </h1>
                 <p className="text-amber-300/90 text-sm sm:text-base font-semibold tracking-wide">
                   Foundation of Lifelong Learning & Empowering Future Leaders
                 </p>
-              </motion.div>
+              </div>
 
               {/* Description */}
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.35, duration: 0.7 }}
-                className="text-slate-200 text-sm sm:text-base leading-relaxed max-w-xl font-normal"
-              >
+              <p className="text-slate-200 text-sm sm:text-base leading-relaxed max-w-xl font-normal">
                 At our network, education is the shaping of character, critical thinking, and 21st-century future readiness. 
                 Offering structured Montessori early years, Jolly Phonics, STEAM innovation, and Pakistan&apos;s most comprehensive Future Skills program.
-              </motion.p>
+              </p>
 
               {/* Action Buttons */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5, duration: 0.7 }}
-                className="flex flex-wrap items-center gap-3 sm:gap-4 pt-2"
-              >
+              <div className="flex flex-wrap items-center gap-3 sm:gap-4 pt-2">
                 <Link
                   href="/OnlineAdmission"
                   className="px-6 py-3.5 rounded-2xl bg-gradient-to-r from-[#9B1B1E] to-[#c3272b] hover:from-[#7d1417] hover:to-[#9B1B1E] text-white font-bold text-sm sm:text-base shadow-[0_10px_25px_rgba(155,27,30,0.45)] hover:shadow-xl transition-all flex items-center gap-2 active:scale-95"
@@ -144,15 +124,10 @@ const HeroHeader = ({ title, description }) => {
                   <FaWhatsapp className="text-lg" />
                   <span className="hidden sm:inline">WhatsApp</span>
                 </a>
-              </motion.div>
+              </div>
 
               {/* Live Trust Badges */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.65, duration: 0.7 }}
-                className="pt-4 flex flex-wrap items-center gap-3 text-xs text-slate-300"
-              >
+              <div className="pt-4 flex flex-wrap items-center gap-3 text-xs text-slate-300">
                 <div className="flex items-center gap-1.5 bg-white/5 px-3 py-1.5 rounded-xl border border-white/10">
                   <FaCheckCircle className="text-emerald-400 text-xs" />
                   <span>16+ Operational Campuses</span>
@@ -165,31 +140,27 @@ const HeroHeader = ({ title, description }) => {
                   <FaCheckCircle className="text-emerald-400 text-xs" />
                   <span>100% Board Success</span>
                 </div>
-              </motion.div>
+              </div>
             </div>
 
             {/* Right Column: Interactive Animated Showcase Carousel */}
             <div className="lg:col-span-5 relative flex flex-col items-center">
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.3, duration: 0.8 }}
-                className="relative w-full max-w-md h-80 sm:h-[400px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white/15 bg-slate-950 group"
-              >
-                <AnimatePresence mode="wait">
+              <div className="relative w-full max-w-md h-80 sm:h-[400px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white/15 bg-slate-950 group">
+                <AnimatePresence initial={false} mode="wait">
                   <motion.div
                     key={currentSlide}
-                    initial={{ opacity: 0, scale: 1.05 }}
-                    animate={{ opacity: 1, scale: 1 }}
+                    initial={{ opacity: 0.8 }}
+                    animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    transition={{ duration: 0.6 }}
+                    transition={{ duration: 0.3 }}
                     className="relative w-full h-full"
                   >
                     <Image
                       src={showcaseSlides[currentSlide].image}
                       alt={showcaseSlides[currentSlide].title}
                       fill
-                      priority
+                      priority={currentSlide === 0}
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 450px"
                       className="object-cover"
                     />
 
@@ -227,7 +198,7 @@ const HeroHeader = ({ title, description }) => {
                 <div className="absolute top-4 left-4 bg-[#9B1B1E]/90 backdrop-blur-md text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg border border-red-400/40 z-20">
                   ★ {showcaseSlides[currentSlide].badge}
                 </div>
-              </motion.div>
+              </div>
 
               {/* Thumbnail Selector Pills */}
               <div className="flex items-center gap-2 mt-4">

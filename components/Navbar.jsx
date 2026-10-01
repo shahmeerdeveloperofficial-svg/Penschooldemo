@@ -193,6 +193,7 @@ const Navbar = () => {
                 <button
                   onClick={handleNavClose}
                   className="transition-all text-slate-600 hover:text-slate-900 duration-200 hover:bg-white h-9 w-9 grid place-content-center rounded-full text-xl shadow-xs"
+                  aria-label="Close navigation menu"
                 >
                   <RxCross2 />
                 </button>

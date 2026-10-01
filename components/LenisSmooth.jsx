@@ -16,16 +16,23 @@ const LenisSmooth = () => {
   }, [pathname, lenisRef]);
 
   useEffect(() => {
+    // Check if device is desktop / non-touch
+    if (typeof window === "undefined" || window.innerWidth < 1024 || "ontouchstart" in window) {
+      return;
+    }
+
     const lenis = new Lenis();
     lenisRef.current = lenis;
 
     lenis.on("scroll", ScrollTrigger.update);
-    gsap.ticker.add((time) => {
+    const tickerCallback = (time) => {
       lenis.raf(time * 800);
-    });
+    };
+    gsap.ticker.add(tickerCallback);
     gsap.ticker.lagSmoothing(0);
 
     return () => {
+      gsap.ticker.remove(tickerCallback);
       lenis.destroy();
     };
   }, []);

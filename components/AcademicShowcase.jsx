@@ -151,6 +151,8 @@ const AcademicShowcase = () => {
                     src="/pen-assets/WhatsApp Image 2026-09-24 at 5.28.05 PM.jpeg"
                     alt="PEN Pre-School Montessori Activity"
                     fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 450px"
+                    loading="lazy"
                     className="object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-4">
@@ -279,6 +281,8 @@ const AcademicShowcase = () => {
                     src="/pen-assets/WhatsApp Image 2026-09-24 at 5.28.07 PM (1).jpeg"
                     alt="PEN Senior School Coding & STEAM Hub"
                     fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 450px"
+                    loading="lazy"
                     className="object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-4">

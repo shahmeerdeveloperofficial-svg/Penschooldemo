@@ -81,6 +81,8 @@ const LeadershipDesk = () => {
                   src={item.data.image}
                   alt={item.data.name}
                   fill
+                  sizes="48px"
+                  loading="lazy"
                   className="object-cover object-top"
                 />
               </div>
@@ -139,6 +141,8 @@ const LeadershipDesk = () => {
                     src={activeLeader.image}
                     alt={activeLeader.name}
                     fill
+                    sizes="(max-width: 640px) 180px, 220px"
+                    loading="lazy"
                     className="object-cover object-top"
                   />
                 </div>

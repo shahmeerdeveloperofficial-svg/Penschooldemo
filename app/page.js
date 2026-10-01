@@ -2,18 +2,18 @@ import dynamic from "next/dynamic";
 import HeroHeader from "../components/HeroHeader";
 import LeadershipDesk from "../components/LeadershipDesk";
 import DirectorSpotlight from "../components/DirectorSpotlight";
-import SportsGalaSection from "../components/SportsGalaSection";
-import MontessoriClassrooms from "../components/MontessoriClassrooms";
-import ActivityBasedLearning from "../components/ActivityBasedLearning";
-import AcademicShowcase from "../components/AcademicShowcase";
-import NetworkStats from "../components/NetworkStats";
-import CampusSelector from "../components/CampusSelector";
-import CircularsHub from "../components/CircularsHub";
-import MediaGallery from "../components/MediaGallery";
-import Bento from "../components/Bento";
-import About from "@/components/About";
 
 const Marquee = dynamic(() => import("../components/Marquee"), { ssr: false });
+const SportsGalaSection = dynamic(() => import("../components/SportsGalaSection"));
+const MontessoriClassrooms = dynamic(() => import("../components/MontessoriClassrooms"));
+const ActivityBasedLearning = dynamic(() => import("../components/ActivityBasedLearning"));
+const AcademicShowcase = dynamic(() => import("../components/AcademicShowcase"));
+const NetworkStats = dynamic(() => import("../components/NetworkStats"));
+const CampusSelector = dynamic(() => import("../components/CampusSelector"));
+const CircularsHub = dynamic(() => import("../components/CircularsHub"));
+const MediaGallery = dynamic(() => import("../components/MediaGallery"));
+const Bento = dynamic(() => import("../components/Bento"));
+const About = dynamic(() => import("@/components/About"));
 const Clubs = dynamic(() => import("../components/Clubs"));
 const AccessLMS = dynamic(() => import("../components/AccessLMS"));
 

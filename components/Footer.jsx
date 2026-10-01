@@ -90,10 +90,10 @@ const Footer = () => {
             <Link href="/" className="flex items-center gap-3">
               <Image
                 src="/penlogo.png"
-                width={300}
-                height={150}
+                width={200}
+                height={100}
                 alt="PEN School System logo"
-                priority
+                loading="lazy"
                 className="h-12 sm:h-14 w-auto object-contain bg-white/95 p-1.5 rounded-xl shadow-md"
               />
             </Link>

@@ -91,6 +91,8 @@ const MontessoriClassrooms = () => {
                   src={item.src}
                   alt={item.title}
                   fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
+                  loading="lazy"
                   className="object-cover group-hover:scale-108 transition-transform duration-500"
                 />
                 <div className="absolute top-3 left-3 bg-[#0B2240]/90 text-amber-300 text-[11px] font-bold px-3 py-1 rounded-full shadow-md">

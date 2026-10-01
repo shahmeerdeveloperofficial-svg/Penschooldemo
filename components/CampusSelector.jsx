@@ -2,10 +2,22 @@
 
 import React, { useState, useMemo } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { campusesList } from "@/constants/penData";
-import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaGraduationCap, FaDirections, FaWhatsapp, FaCheck, FaSearch, FaBuilding, FaFacebook } from "react-icons/fa";
+import { 
+  FaMapMarkerAlt, 
+  FaPhoneAlt, 
+  FaGraduationCap, 
+  FaDirections, 
+  FaWhatsapp, 
+  FaCheck, 
+  FaSearch, 
+  FaBuilding, 
+  FaFacebook,
+  FaExternalLinkAlt,
+  FaCrown,
+  FaArrowRight
+} from "react-icons/fa";
 
 const CampusSelector = () => {
   const [selectedCity, setSelectedCity] = useState("All");
@@ -16,8 +28,8 @@ const CampusSelector = () => {
     return ["All", ...list];
   }, []);
 
-  const filteredCampuses = useMemo(() => {
-    return campusesList.filter((campus) => {
+  const { mainBranch, otherBranches } = useMemo(() => {
+    const filtered = campusesList.filter((campus) => {
       const matchesCity = selectedCity === "All" || campus.city.toLowerCase() === selectedCity.toLowerCase();
       const matchesQuery = !searchQuery || 
         campus.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -25,6 +37,11 @@ const CampusSelector = () => {
         campus.address.toLowerCase().includes(searchQuery.toLowerCase());
       return matchesCity && matchesQuery;
     });
+
+    const main = filtered.find((c) => c.id === "bahria-town-lahore");
+    const others = filtered.filter((c) => c.id !== "bahria-town-lahore");
+
+    return { mainBranch: main, otherBranches: others };
   }, [selectedCity, searchQuery]);
 
   return (
@@ -40,7 +57,7 @@ const CampusSelector = () => {
         </h2>
         <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
           State-of-the-art learning environments across Punjab, equipped with modern Montessori labs, 
-          STEAM innovation centers, digital libraries, and secure transport networks.
+          STEAM innovation centers, and dedicated transport networks.
         </p>
       </div>
 
@@ -76,131 +93,250 @@ const CampusSelector = () => {
         </div>
       </div>
 
-      {/* Campus Cards Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <AnimatePresence>
-          {filteredCampuses.map((campus) => (
-            <motion.div
-              key={campus.id}
-              layout
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.95 }}
-              transition={{ duration: 0.3 }}
-              className="bg-white rounded-3xl border border-slate-200/90 shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col justify-between group"
-            >
-              <div>
-                {/* Campus Image */}
-                <div className="relative h-52 w-full bg-slate-100 overflow-hidden">
-                  <Image
-                    src={campus.image}
-                    alt={campus.name}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute top-3 left-3 bg-[#0B2240]/90 backdrop-blur-xs text-amber-400 text-[11px] font-bold px-3 py-1 rounded-full shadow-sm">
-                    {campus.badge}
-                  </div>
-                  <div className="absolute top-3 right-3 bg-white/95 backdrop-blur-xs text-slate-800 text-[11px] font-bold px-2.5 py-1 rounded-full shadow-sm border border-slate-200">
-                    📍 {campus.city}
+      {/* 1. MAIN BRANCH SPOTLIGHT: BAHRIA TOWN CAMPUS (Prominent Full-Width Featured Card) */}
+      {mainBranch && (
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="relative bg-white rounded-3xl border-2 border-amber-400/80 shadow-2xl overflow-hidden group"
+        >
+          {/* Top Main Branch Banner Badge */}
+          <div className="bg-gradient-to-r from-[#0B2240] via-[#11315b] to-[#0B2240] px-6 py-2.5 text-white flex items-center justify-between flex-wrap gap-2 border-b border-amber-400/40">
+            <div className="flex items-center gap-2">
+              <FaCrown className="text-amber-400 text-sm animate-pulse" />
+              <span className="font-extrabold text-xs sm:text-sm tracking-wide text-amber-300 uppercase">
+                Main Branch & Executive Head Campus
+              </span>
+            </div>
+            <div className="flex items-center gap-2 text-xs font-semibold text-slate-200">
+              <span className="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+              <span>Admissions Open 2026-2027</span>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
+            {/* Wide Expanded Image Section */}
+            <div className="lg:col-span-7 relative min-h-[300px] sm:min-h-[380px] lg:min-h-[460px] w-full bg-slate-900 overflow-hidden">
+              <Image
+                src={mainBranch.image}
+                alt={mainBranch.name}
+                fill
+                sizes="(max-width: 1024px) 100vw, 60vw"
+                loading="lazy"
+                className="object-cover object-top group-hover:scale-105 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6">
+                <div className="flex items-center gap-2 flex-wrap mb-2">
+                  <span className="bg-amber-400 text-[#0B2240] text-xs font-extrabold px-3 py-1 rounded-full shadow-md">
+                    ★ {mainBranch.badge}
+                  </span>
+                  <span className="bg-black/60 backdrop-blur-md text-white text-xs font-bold px-3 py-1 rounded-full border border-white/20">
+                    📍 {mainBranch.city}
+                  </span>
+                </div>
+                <h3 className="text-2xl sm:text-3xl font-extrabold text-white leading-tight">
+                  {mainBranch.name}
+                </h3>
+              </div>
+            </div>
+
+            {/* Main Branch Details & Full Facilities */}
+            <div className="lg:col-span-5 p-6 sm:p-8 flex flex-col justify-between space-y-6 bg-slate-50/50">
+              <div className="space-y-4">
+                <div>
+                  <div className="flex items-start gap-2.5 text-slate-700 text-sm font-medium">
+                    <FaMapMarkerAlt className="text-[#9B1B1E] text-base shrink-0 mt-1" />
+                    <span>{mainBranch.address}</span>
                   </div>
                 </div>
 
-                {/* Campus Body */}
-                <div className="p-6 space-y-4">
-                  <div>
-                    <h3 className="text-lg sm:text-xl font-bold text-[#0B2240] group-hover:text-[#9B1B1E] transition-colors leading-snug">
-                      {campus.name}
-                    </h3>
-                    <div className="flex items-start gap-2 text-slate-500 text-xs mt-2">
-                      <FaMapMarkerAlt className="text-[#9B1B1E] shrink-0 mt-0.5" />
-                      <span>{campus.address}</span>
-                    </div>
+                {/* Grades & Contacts Box */}
+                <div className="p-4 bg-white rounded-2xl border border-slate-200/80 shadow-xs space-y-3">
+                  <div className="flex items-center gap-2.5 text-xs sm:text-sm font-bold text-[#0B2240]">
+                    <FaGraduationCap className="text-amber-500 text-base shrink-0" />
+                    <span>Grades: {mainBranch.levels}</span>
                   </div>
-
-                  <div className="p-3.5 bg-slate-50 rounded-2xl border border-slate-100 space-y-2">
-                    <div className="flex items-center gap-2 text-xs font-semibold text-slate-700">
-                      <FaGraduationCap className="text-amber-500 text-sm" />
-                      <span>Grades: {campus.levels}</span>
+                  <div className="flex flex-col gap-1.5 text-xs text-slate-700 pt-2 border-t border-slate-100">
+                    <div className="flex items-center gap-2">
+                      <FaPhoneAlt className="text-emerald-600 text-xs shrink-0" />
+                      <span className="text-slate-500">Helpline:</span>
+                      <a href={`tel:${mainBranch.phone}`} className="hover:underline font-bold text-slate-900">
+                        {mainBranch.phone}
+                      </a>
                     </div>
-                    <div className="flex flex-col gap-1 text-xs text-slate-600 pt-1 border-t border-slate-200/60">
+                    {mainBranch.altPhone && (
                       <div className="flex items-center gap-2">
-                        <FaPhoneAlt className="text-emerald-600 text-[11px]" />
-                        <a href={`tel:${campus.phone}`} className="hover:underline font-bold text-slate-800">
-                          {campus.phone}
+                        <FaPhoneAlt className="text-blue-600 text-xs shrink-0" />
+                        <span className="text-slate-500">Inquiry:</span>
+                        <a href={`tel:${mainBranch.altPhone}`} className="hover:underline font-semibold text-slate-800">
+                          {mainBranch.altPhone}
                         </a>
                       </div>
-                      {campus.altPhone && (
-                        <div className="flex items-center gap-2 text-[11px] text-slate-500">
-                          <FaPhoneAlt className="text-blue-600 text-[10px]" />
-                          <a href={`tel:${campus.altPhone}`} className="hover:underline font-medium">
-                            {campus.altPhone}
-                          </a>
-                        </div>
-                      )}
-                    </div>
+                    )}
                   </div>
+                </div>
 
-                  {/* Facilities list */}
-                  <div>
-                    <p className="text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-2">
-                      Key Campus Facilities
-                    </p>
-                    <div className="flex flex-wrap gap-1.5">
-                      {campus.facilities.map((fac, fIdx) => (
-                        <span
-                          key={fIdx}
-                          className="text-[10px] px-2 py-0.5 bg-slate-100 text-slate-700 rounded-md font-medium flex items-center gap-1"
-                        >
-                          <FaCheck className="text-emerald-500 text-[8px]" />
-                          {fac}
-                        </span>
-                      ))}
-                    </div>
+                {/* Facilities Badges */}
+                <div>
+                  <p className="text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-2.5">
+                    Key Campus Facilities
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {mainBranch.facilities.map((fac, fIdx) => (
+                      <span
+                        key={fIdx}
+                        className="text-xs px-2.5 py-1 bg-white border border-slate-200 text-slate-800 rounded-lg font-medium flex items-center gap-1.5 shadow-2xs"
+                      >
+                        <FaCheck className="text-emerald-500 text-[10px]" />
+                        {fac}
+                      </span>
+                    ))}
                   </div>
                 </div>
               </div>
 
               {/* Action Buttons */}
-              <div className="p-6 pt-0 flex flex-col gap-2 border-t border-slate-100 mt-4">
+              <div className="flex flex-col gap-2.5 pt-4 border-t border-slate-200">
                 <div className="grid grid-cols-2 gap-2">
                   <a
-                    href={campus.mapUrl}
+                    href={mainBranch.mapUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="py-2 px-3 rounded-xl bg-slate-100 hover:bg-[#0B2240] text-slate-700 hover:text-white font-semibold text-xs flex items-center justify-center gap-1.5 transition-colors"
+                    className="py-3 px-4 rounded-xl bg-[#0B2240] hover:bg-[#9B1B1E] text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2 transition-colors shadow-xs"
                   >
-                    <FaDirections className="text-amber-500" />
+                    <FaDirections className="text-amber-400 text-sm" />
                     <span>Location Map</span>
                   </a>
                   <a
-                    href={`https://wa.me/923016666233?text=${encodeURIComponent(`Inquiring about admissions for ${campus.name}`)}`}
+                    href={`https://wa.me/923016666233?text=${encodeURIComponent(`Inquiring about admissions for ${mainBranch.name}`)}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="py-2 px-3 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white font-semibold text-xs flex items-center justify-center gap-1.5 transition-colors shadow-xs"
+                    className="py-3 px-4 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2 transition-colors shadow-xs"
                   >
-                    <FaWhatsapp />
+                    <FaWhatsapp className="text-base" />
                     <span>WhatsApp</span>
                   </a>
                 </div>
-                {campus.facebookUrl && (
+                {mainBranch.facebookUrl && (
                   <a
-                    href={campus.facebookUrl}
+                    href={mainBranch.facebookUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full py-2 px-3 rounded-xl bg-[#1877F2]/10 hover:bg-[#1877F2] text-[#1877F2] hover:text-white font-bold text-xs flex items-center justify-center gap-2 transition-all border border-[#1877F2]/20 shadow-2xs group/fb"
+                    className="w-full py-2.5 px-4 rounded-xl bg-[#1877F2]/10 hover:bg-[#1877F2] text-[#1877F2] hover:text-white font-bold text-xs flex items-center justify-center gap-2 transition-all border border-[#1877F2]/30 shadow-2xs group/fb"
                   >
-                    <FaFacebook className="text-sm text-[#1877F2] group-hover/fb:text-white transition-colors" />
+                    <FaFacebook className="text-base text-[#1877F2] group-hover/fb:text-white transition-colors" />
                     <span>Official Facebook Campus Page</span>
+                    <FaExternalLinkAlt className="text-[10px] opacity-70 group-hover/fb:translate-x-0.5 transition-transform" />
                   </a>
                 )}
               </div>
-            </motion.div>
-          ))}
-        </AnimatePresence>
+            </div>
+          </div>
+        </motion.div>
+      )}
+
+      {/* 2. OTHER OPERATIONAL NETWORK BRANCHES (Clean, Sleek, Animated Directory Cards - No Clutter/Photos) */}
+      <div className="space-y-4">
+        <div className="flex items-center justify-between border-b border-slate-200 pb-3">
+          <div className="flex items-center gap-2">
+            <span className="w-3 h-3 rounded-full bg-[#9B1B1E]"></span>
+            <h3 className="text-xl sm:text-2xl font-extrabold text-[#0B2240]">
+              Operational Network Branches ({otherBranches.length})
+            </h3>
+          </div>
+          <span className="text-xs font-semibold text-slate-500">
+            {selectedCity === "All" ? "Punjab Network" : selectedCity}
+          </span>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <AnimatePresence>
+            {otherBranches.map((campus, idx) => (
+              <motion.div
+                key={campus.id}
+                layout
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.95 }}
+                transition={{ duration: 0.25, delay: idx * 0.03 }}
+                whileHover={{ y: -4 }}
+                className="bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-[#9B1B1E]/40 transition-all duration-300 p-5 flex flex-col justify-between group"
+              >
+                {/* Branch Header & Location */}
+                <div className="space-y-3">
+                  <div className="flex items-start justify-between gap-2">
+                    <div className="flex items-center gap-1.5 text-xs font-bold text-amber-600 bg-amber-50 px-2.5 py-1 rounded-full border border-amber-200/60">
+                      <span>#{idx + 2}</span>
+                      <span>{campus.city}</span>
+                    </div>
+                    <span className="text-[11px] text-slate-400 font-medium">
+                      Operational Branch
+                    </span>
+                  </div>
+
+                  <div>
+                    <h4 className="text-base sm:text-lg font-bold text-[#0B2240] group-hover:text-[#9B1B1E] transition-colors leading-snug">
+                      {campus.name}
+                    </h4>
+                    <div className="flex items-start gap-2 text-slate-600 text-xs mt-2 leading-relaxed">
+                      <FaMapMarkerAlt className="text-[#9B1B1E] text-xs shrink-0 mt-0.5" />
+                      <span>{campus.address}</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Direct Action Links (Map, WhatsApp, Facebook) */}
+                <div className="pt-4 mt-4 border-t border-slate-100 flex flex-col gap-2">
+                  <div className="grid grid-cols-2 gap-2">
+                    <a
+                      href={campus.mapUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="py-2 px-3 rounded-xl bg-slate-100 hover:bg-[#0B2240] text-slate-700 hover:text-white font-bold text-xs flex items-center justify-center gap-1.5 transition-colors"
+                    >
+                      <FaDirections className="text-amber-500 text-xs" />
+                      <span>Location Map</span>
+                    </a>
+
+                    <a
+                      href={`https://wa.me/923016666233?text=${encodeURIComponent(`Inquiring about admissions for ${campus.name}`)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="py-2 px-3 rounded-xl bg-[#25D366]/15 hover:bg-[#25D366] text-[#128C7E] hover:text-white font-bold text-xs flex items-center justify-center gap-1.5 transition-colors"
+                    >
+                      <FaWhatsapp className="text-sm" />
+                      <span>WhatsApp</span>
+                    </a>
+                  </div>
+
+                  {campus.facebookUrl && (
+                    <a
+                      href={campus.facebookUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full py-2 px-3 rounded-xl bg-[#1877F2]/10 hover:bg-[#1877F2] text-[#1877F2] hover:text-white font-bold text-xs flex items-center justify-center gap-2 transition-all border border-[#1877F2]/20 group/btn"
+                    >
+                      <FaFacebook className="text-sm text-[#1877F2] group-hover/btn:text-white transition-colors" />
+                      <span>Official Facebook Page</span>
+                      <FaArrowRight className="text-[10px] opacity-70 group-hover/btn:translate-x-0.5 transition-transform" />
+                    </a>
+                  )}
+                </div>
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </div>
+
+        {otherBranches.length === 0 && (
+          <div className="p-8 text-center bg-white rounded-2xl border border-slate-200 text-slate-500 text-sm">
+            No campuses found matching your search. Try changing the city or search term.
+          </div>
+        )}
       </div>
     </section>
   );
 };
 
 export default CampusSelector;
+

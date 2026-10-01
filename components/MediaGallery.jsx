@@ -85,6 +85,8 @@ const MediaGallery = () => {
                 src={item.src}
                 alt={item.title}
                 fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 280px"
+                loading="lazy"
                 className="object-cover group-hover:scale-110 transition-transform duration-500"
               />
               <div className="absolute top-3 left-3 bg-[#0B2240]/85 text-amber-300 text-[10px] font-bold px-2.5 py-0.5 rounded-full z-10">

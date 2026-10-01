@@ -26,7 +26,8 @@ const DirectorSpotlight = () => {
                   src="/pen-assets/director-poster-official.png"
                   alt="H. Ali Nasir - Operation Management Director Official Poster"
                   fill
-                  priority
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 420px"
+                  loading="lazy"
                   className="object-contain"
                 />
               </div>
